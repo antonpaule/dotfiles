@@ -1,6 +1,6 @@
-"===============================================================================
+"========================================================================
 " NeoBundle Plugin Manager
-"===============================================================================
+"========================================================================
 " Disable vi-compatibility
 set nocompatible
 
@@ -44,16 +44,13 @@ NeoBundle 'Shougo/neoyank.vim'
 
 " Fuzzy search
 NeoBundle 'mileszs/ack.vim'
-NeoBundle 'sjbach/lusty'
 
 " Marks
 NeoBundle 'airblade/vim-gitgutter'
 
 " Code completion and formatting
 NeoBundle 'Valloric/YouCompleteMe'
-NeoBundle 'rdnetto/YCM-Generator'
 NeoBundle 'rhysd/vim-clang-format'
-NeoBundle 'octol/vim-cpp-enhanced-highlight'
 
 " Comments
 NeoBundle 'scrooloose/nerdcommenter'
@@ -63,9 +60,6 @@ NeoBundle 'majutsushi/tagbar'
 
 " File browsing
 NeoBundle 'scrooloose/nerdtree'
-
-" Shell
-NeoBundle 'thinca/vim-quickrun'
 
 " Git
 NeoBundle 'tpope/vim-fugitive'
@@ -95,12 +89,12 @@ NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'terryma/vim-smooth-scroll'
 NeoBundle 'sjl/gundo.vim'
 
-" VIM
-NeoBundle 'takac/vim-hardtime'
+" cht.sh
+NeoBundle 'dbeniamine/cheat.sh-vim'
 
-" Folding
-" NeoBundle 'LucHermitte/lh-vim-lib'
-" NeoBundle 'LucHermitte/VimFold4C'
+" Rust
+NeoBundle 'rust-lang/rust.vim'
+
 
 " Required:
 call neobundle#end()
@@ -147,7 +141,7 @@ set t_Co=256
 colorscheme Tomorrow-Night
 
 " Airline theme
-"let g:airline_theme="tomorrow"
+" let g:airline_theme="tomorrow"
 
 " Tell Vim to use dark background
 set background=dark
@@ -282,7 +276,8 @@ set smarttab
 set linebreak
 set textwidth=100
 set autoindent
-set nowrap
+set nowrap           " do not automatically wrap on load
+set formatoptions-=t " do not automatically wrap text when typing
 set whichwrap+=h,l,<,>,[,]
 
 " Writes to the unnamed register also writes to the * and + registers. This
@@ -644,23 +639,3 @@ let g:unite_source_grep_recursive_opt = ''
 endif
 
 let g:unite_source_rec_max_cache_files = 1000
-
-"===============================================================================
-" VIM Hardtime
-"===============================================================================
-let g:hardtime_default_on = 0
-
-" enable notifactions
-let g:hardtime_showmsg = 1
-
-" ignore buffers
-let g:hardtime_ignore_buffer_patterns = [ "NERD.*" ]
-
-" ignore quickfix
-let g:hardtime_ignore_quickfix = 1
-
-" timeout
-let g:hardtime_timeout = 5000
-
-" maximum number of repetative key presses
-let g:hardtime_maxcount = 2
