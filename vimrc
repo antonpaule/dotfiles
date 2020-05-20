@@ -50,6 +50,7 @@ NeoBundle 'airblade/vim-gitgutter'
 
 " Code completion and formatting
 NeoBundle 'Valloric/YouCompleteMe'
+NeoBundle 'Valloric/ListToggle'
 NeoBundle 'rhysd/vim-clang-format'
 
 " Comments
@@ -361,7 +362,7 @@ nnoremap <silent> <Leader>2 :TagbarToggle<cr>
 nnoremap <silent> <Leader><tab> :NERDTreeToggle<cr>
 
 " <Leader>q: Quit all, very useful in vimdiff
-nnoremap <Leader>q :qa<cr>
+"nnoremap <Leader>q :qa<cr>
 
 " <Leader>w: Close current buffer
 nnoremap <Leader>w :NERDTreeClose<cr>:bdelete<cr>
@@ -480,12 +481,32 @@ let g:ycm_key_detailed_diagnostics = '<leader>D'
 " Don't ask for permission for loading ycm_extra_conf.py files
 let g:ycm_confirm_extra_conf = 0
 
+" Error/Waring symbols
+let g:ycm_error_symbol = '!!'
+let g:ycm_warning = '>>'
+
+let g:ycm_echo_current_diagnostic = 1
+
+" Populate list for location toggling
+let g:ycm_always_populate_location_list = 1
+
+" Maximum number of diagnostics
+let g:ycm_max_diagnostics_to_display = 100
+
+" ListToggle plugin settings
+let g:lt_location_list_toggle_map = '<leader>l'
+let g:lt_quickfix_list_toggle_map = '<leader>ll'
+nnoremap <leader>q :lclose<cr>
+
+let g:lt_height = 20
+
 " GoTo* commands key mappings
 nnoremap <leader>jd :YcmCompleter GoToDefinition<cr>
 nnoremap <leader>jD :YcmCompleter GoToDeclaration<cr>
+nnoremap <leader>fi :YcmCompleter FixIt<cr>
 
 nnoremap <leader>gt :YcmCompleter GetType<cr>
-nnoremap <leader>gp :YcmCompleter GetParent<cr>
+nnoremap <leader>? :YcmCompleter GetDoc<cr>
 
 "===============================================================================
 " ClangFormat Configuration

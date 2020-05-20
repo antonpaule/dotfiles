@@ -65,6 +65,8 @@ export PATH=~/bin:$PATH
 
 export DOTFILES=$HOME/dotfiles
 
+export LD_LIBRARY_PATH=/local_disk/paule/usr/lib:/opt/dreal/4.19.10.3/lib:/opt/libibex/2.7.4/lib:/usr/local/lib
+
 ## Terminal Settings: Ctrl-S, Ctrl-Q diasabled
 stty -ixon
 
@@ -79,6 +81,7 @@ alias cl=clear
 alias ssh='ssh -X -A'
 alias cbc='xclip -selection clipboard'
 alias cbp='xclip -selection clipboard -o'
+alias docker='sudo docker'
 
 ## Append other zsh settings at the end
 . ${HOME}/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
