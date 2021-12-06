@@ -46,29 +46,14 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(copyfile git extract vi-mode common-aliases zsh-syntax-highlighting colored-man-pages)
+plugins=(copyfile git extract vi-mode common-aliases colored-man-pages)
 
 # User configuration
 
 ## PATH variables
-export PATH=$HOME/bin:/local_disk/paule/usr/bin:/usr/local/bin:$PATH
-export MANPATH=/local_disk/paule/usr/man:/usr/local/man:$MANPATH
 
-# add new maven repo
-export PATH=/local_disk/paule/applications/apache-maven-3.6.1/bin:$PATH
-
-# add cmake
-export PATH=/local_disk/paule/applications/cmake-3.15.0-Linux-x86_64/bin:$PATH
-
-# add ~/bin
-export PATH=~/bin:$PATH
-
+## Exports
 export DOTFILES=$HOME/dotfiles
-
-export LD_LIBRARY_PATH=/local_disk/paule/usr/lib:/opt/dreal/4.19.10.3/lib:/opt/libibex/2.7.4/lib:/usr/local/lib
-
-## Terminal Settings: Ctrl-S, Ctrl-Q diasabled
-stty -ixon
 
 ## System Editor
 export EDITOR=vim
@@ -79,15 +64,4 @@ source $ZSH/oh-my-zsh.sh
 ## Aliases
 alias cl=clear
 alias ssh='ssh -X -A'
-alias cbc='xclip -selection clipboard'
-alias cbp='xclip -selection clipboard -o'
-alias docker='sudo docker'
 
-## Append other zsh settings at the end
-. ${HOME}/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
-
-# Created by `userpath` on 2019-09-12 08:16:37
-export PATH="$PATH:/disk/sim/home/paule/.local/bin"
-
-# Rust
-export PATH="$HOME/.cargo/bin:$PATH"
