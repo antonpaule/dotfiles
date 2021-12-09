@@ -5,7 +5,8 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="geoffgarside"
+#ZSH_THEME="geoffgarside"
+ZSH_THEME="random"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -58,10 +59,14 @@ export DOTFILES=$HOME/dotfiles
 ## System Editor
 export EDITOR=vim
 
+export LC_CTYPE="de_DE.UTF-8"
+
 ## Source oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
 ## Aliases
 alias cl=clear
-alias ssh='ssh -X -A'
+alias ssh='ssh -A'
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
