@@ -56,6 +56,9 @@ plugins=(copyfile git extract vi-mode common-aliases colored-man-pages)
 ## Exports
 export DOTFILES=$HOME/dotfiles
 
+# OpenJDK installation via brew
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+
 ## System Editor
 export EDITOR=vim
 
