@@ -47,7 +47,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(copyfile git extract vi-mode common-aliases colored-man-pages)
+plugins=(copyfile git extract vi-mode common-aliases colored-man-pages fzf)
 
 # User configuration
 
@@ -55,9 +55,6 @@ plugins=(copyfile git extract vi-mode common-aliases colored-man-pages)
 
 ## Exports
 export DOTFILES=$HOME/dotfiles
-
-# OpenJDK installation via brew
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
 ## System Editor
 export EDITOR=vim
