@@ -2,14 +2,19 @@
 return {
   {
     "navarasu/onedark.nvim",
-    opts = {style = "darker"},
+    opts = { style = "darker" },
+  },
+  {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    priority = 1000,
   },
 
   -- Configure LazyVim default theme
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "onedark"
-    }
-  }
+      colorscheme = "catppuccin-mocha",
+    },
+  },
 }
